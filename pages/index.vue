@@ -1,12 +1,14 @@
 <template>
   <div>
-  <Products :products="products" :error="error" />
+  <!-- <Products :products="products" :error="error" />-->
+  <Homepage />
   <!-- <Categories :categories="categories" :error="error" :storeUrl="storeUrl" />-->
   </div>
 </template>
 
 <script>
 import Products from "~/components/Products.vue"
+import Homepage from "~/views/Homepage.vue"
 // import Categories from "~/components/Categories.vue"
 
 export default {
@@ -29,7 +31,8 @@ export default {
     }
   },
   components: {
-    Products
+    Products,
+    Homepage
   }
 }
 </script>
