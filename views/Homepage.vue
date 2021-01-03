@@ -1,12 +1,20 @@
 <template>
-  <h1>hello</h1>
+<div>
+  <div v-if="error">
+    {{ error }}
+  </div>
+
+  <div v-else >
+    {{ homepage.title }}
+  </div>
+</div>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      data: null,
+      homepage: null,
       error: null
     }
   },
