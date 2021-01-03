@@ -5,20 +5,13 @@
       <img src="~/assets/strapi.png" class="logo" height="150" width="150" />
     </span>
   </nuxt-link>
-
-  <!-- <button class="snipcart-checkout flex items-center">
-    <Cart />
-    <span class="snipcart-total-price ml-3 font-semibold text-sm text-indigo-500"></span>
-  </button>-->
 </div>
 </template>
 
 <script>
-import Cart from "./icons/cart.vue"
 
 export default {
   components: {
-    Cart
   }
 }
 </script>

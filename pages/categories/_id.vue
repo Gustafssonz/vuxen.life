@@ -1,9 +1,9 @@
 <template>
-  <Products :products="this.category.products" :error="error" />
+  <Services :services="this.category.services" :error="error" />
 </template>
 
 <script>
-import Products from "~/components/Products.vue"
+import Services from "~/components/Services.vue"
 
 export default {
   data() {
@@ -20,7 +20,7 @@ export default {
     }
   },
   components: {
-    Products
+    Services
   }
 }
 </script>
