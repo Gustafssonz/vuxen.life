@@ -4,7 +4,7 @@
     {{ error }}
   </div>
 
-  <div v-else >
+  <div v-if="homepage" >
     {{ homepage.title }}
   </div>
 </div>
