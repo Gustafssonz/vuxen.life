@@ -7,30 +7,30 @@
 </template>
 
 <script>
-import Services from "~/components/Services.vue"
+// import Services from "~/components/Services.vue"
 import Homepage from "~/views/Homepage.vue"
- import Categories from "~/components/Categories.vue"
+// import Categories from "~/components/Categories.vue"
 
 export default {
   data() {
     return {
-      categories: [],
-      data: null,
-      services: [],
+      // categories: [],
+      homepage: null,
+      // services: [],
       error: null
     }
   },
   async mounted() {
     try {
-      this.categories = await this.$strapi.find('categories')
-      this.services = await this.$strapi.$services.find()
-      this.data = await this.$strapi.$homepage.find()
+      // this.categories = await this.$strapi.find('categories')
+      // this.services = await this.$strapi.$services.find()
+      this.homepage = await this.$strapi.$homepage.find()
     } catch (error) {
       this.error = error
     }
   },
   components: {
-    Services,
+    // Services,
     Homepage
   }
 }
