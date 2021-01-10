@@ -23,12 +23,14 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: [
+  ],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [],
+  plugins: [
+  ],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
@@ -44,7 +46,9 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/strapi'],
+  modules: [
+    '@nuxtjs/strapi',
+  ],
   strapi: {
     url: process.env.API_URL || "http://localhost:1337",
     entities: [
