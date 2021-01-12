@@ -3,28 +3,18 @@
 		<div v-if="error">
 			{{ error }}
 		</div>
-		<div v-for="step in steps" :key="steps.id">
+
+		<div v-for="(step,index) in steps" :key="steps.id">
 			<div class="card">
 				<div class="card-content">
 					<p class="title">
-						{{ step.title}}
+						{{ step.step_title}}
 					</p>
 				</div>
-				<footer class="card-footer">
-					<p class="card-footer-item">
-						<span>
-							View on
-							<a
-								href="https://twitter.com/codinghorror/status/506010907021828096"
-								>Twitter</a
-							>
-						</span>
-					</p>
-					<p class="card-footer-item">
-						<span> Share on <a href="#">Facebook</a> </span>
-					</p>
-				</footer>
 			</div>
+			<div v-if="index !== isLastStep(steps)">
+					{{index}}
+				</div>
 		</div>
 	</div>
 </template>
@@ -55,13 +45,15 @@ export default {
 	},
 	methods: {
 		getStrapiMedia,
+		isLastStep(steps){
+			return steps.length -1;
+		}
 	},
 };
 </script>
 
-<style>
-.crop {
-	width: 180px;
-	height: 180px;
-}
+<style lang="scss" scoped>
+	.card {
+		color: $primary;
+	}
 </style>

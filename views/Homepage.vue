@@ -4,7 +4,7 @@
 			{{ error }}
 		</div>
 
-		<div v-if="homepage" class="">
+		<div v-if="homepage">
 			{{ homepage.title }}
 			<Steps :steps="homepage.steps.steps" :error="error" />
 		</div>
@@ -34,6 +34,5 @@ export default {
 };
 </script>
 
-<style>
-
+<style lang="scss">
 </style>
